@@ -10,6 +10,7 @@
 CDC, verilerdeki değişikliği yakalamak için SQL Server T-Log alt yapısını kullanır. SQL Server, takip etmek istediğimiz tabloda bulunan verilerdeki değişikliği önce loga yazar. Eğer tablo üzerinde CDC yapısı aktif ise(nasıl aktif edileceği bir sonraki bölümde anlatılacaktır) Resim 2'de gösterildiği gibi, transaction log mekanizması loga yazılan verileri CDC sürecine giriş olarak gönderir. CDC süreci, transaction log mekanizması üzerinden değişiklikleri alıp tablo üzerinde kayıt oluşturur. Bu kayıt, izlenilmesi istenen tablonun aynı sütun yapısıyla ancak tablo üzerindeki değişikliğin ne olduğunu özetlemek için meta verileri içeren ek sütunlar bulundurur. Log alt yapısını kullandığı için daha performanslı, hızlı ve sisteme daha az yük getiriyor. Ayrıca sadece tablo üzerinde değil, tüm tablodaki değişikliğin algılanması yerine, değişikliğin algılanmasını istediğiniz sütunu seçebiliyorsunuz. Böylece, daha etkili bir yapı sunuyor.
 
 ![CDC](https://media2.picsearch.com/is?LtfQTyawFJHox31XVsnwzkV_-yr5xyCmdE1n5fHHdRA&height=319)
+[Detaylı bilgi için tıklayınız.](https://docs.microsoft.com/en-us/sql/relational-databases/track-changes/about-change-data-capture-sql-server?view=sql-server-ver15) 
 
 > Not: CDC, SQL Server Enterprise, Developer, SQL Server 2016 SP1 ve sonraki Standard sürümleri destekler. Fakat Web ve Express sürümlerini desteklemez. Örneklerimde SQL Server 2012 Developer sürümünü kullandım. Siz de uygulamadan önce SQL Server sürümünüzün CDC’yi destekleyip desteklemediğini kontrol etmelisiniz.
 
